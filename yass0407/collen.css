@@ -1,0 +1,73 @@
+html,body{
+    max-width: 63%;
+}
+
+body{
+    background-color: white;
+    display: grid;
+}
+
+.horizontal{
+    position:fixed; left: 0px; top:-76px;
+    height:170px;border-width:0;width:99.9%;color: white;background-color: white;
+    box-shadow: 0 0px 3px darkgrey;
+    z-index: 1;
+    border:0.1px solid lightgrey;
+}
+
+.nomepagina{
+    position:fixed; top: -5px; left: 490px;
+    z-index: 1;
+}
+
+.casinha{
+    z-index: 2;
+    display: flex;
+    position: fixed; left: 1000px; top: 45px;
+}
+
+.casinha a{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.05);
+    margin: 0 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.casinha a .fa-solid{
+    font-size: 25px;
+    line-height: 50px;
+    position:relative;
+    z-index: 10;
+    transition: color 0.5s;
+}
+
+.casinha a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -90px;
+    left: 0;
+    background: linear-gradient(-45deg, #0130ff, #00b9f2);
+    position:absolute;
+    transition: 0.5s;
+}
+
+.casinha a:hover::after{
+    top: 0px;
+}
+
+.casinha a:hover .fa-solid{
+    color: #fff;
+
+}
+
+.casinha a:hover{
+    transform: translateY(-10px);
+}
